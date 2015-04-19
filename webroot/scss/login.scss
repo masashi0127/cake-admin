@@ -1,0 +1,27 @@
+@import 'common';
+
+.login-form {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 300px;
+    height: 100px;
+}
+
+.login-form__account-id,
+.login-form__password {
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.login-form__button-submit {
+    @extend .base-button;
+}
+
+.login-form__error-message {
+    color: $base-color;
+}
