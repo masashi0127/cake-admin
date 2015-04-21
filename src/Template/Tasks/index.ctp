@@ -1,3 +1,2 @@
-<div id="tasks" class="content">
-    <?= $this->Html->script('min/'.strtolower($this->viewPath).'/main.js'); ?>
-</div>
+<div id="tasks"></div>
+<?= $this->Html->script('min/'.strtolower($this->viewPath).'/main.js?'.date('YmdHis')); ?>

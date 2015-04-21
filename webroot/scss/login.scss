@@ -20,6 +20,7 @@
 
 .login-form__button-submit {
     @extend .base-button;
+    width: 100%;
 }
 
 .login-form__error-message {

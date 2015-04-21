@@ -4,7 +4,7 @@ var SearchBox = require('./search_box.jsx');
 var Tasks = React.createClass({
     render: function() {
         return (
-            <div>
+            <div className="content">
                 <SearchBox />
             </div>
         );

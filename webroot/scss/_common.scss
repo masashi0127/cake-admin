@@ -34,12 +34,12 @@ body {
 input[type="text"],
 input[type="password"] {
     padding: 5px;
-    margin-bottom: 10px;
     border: 1px solid #ddd;
     font-size: medium;
+    height: 30px;
+    line-height: 30px;
     @include border-top-radius(3px);
     @include border-bottom-radius(3px);
-    
 }
 
 ul {
@@ -52,10 +52,10 @@ a {
 }
 
 .base-button {
-    padding: 10px 10px;
     margin: 0;
     font-size: medium;
-    width: 100%;
+    height: 30px;
+    line-height: 30px;
     border: 1px solid $base-gray;
     background-color: $base-white;
     color: $base-gray;
