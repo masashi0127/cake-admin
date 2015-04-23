@@ -36,6 +36,11 @@
 .header__sub-item {
     width: 100%;
     text-align: center;
+    background-color: rgba(white, 0.7);
+
+    :hover {
+        background-color: rgba($base-light-color, 0.7);
+    }
 }
 
 .header__link {
@@ -61,8 +66,4 @@
     width: 100%;
     display: block;
     box-sizing: border-box;
-
-    &:hover {
-        border-bottom: 1px solid $base-light-color;
-    }
 }

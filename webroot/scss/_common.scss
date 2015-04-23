@@ -42,6 +42,21 @@ input[type="password"] {
     @include border-bottom-radius(3px);
 }
 
+select {
+    @include appearance(none);
+    overflow: hidden;
+    margin: 0;
+    padding: 5px 10px;
+    border:1px solid $base-gray;
+    min-width: 100px;
+
+    &:hover {
+        background-color: $base-gray;
+        color: $base-white;
+    }
+
+}
+
 ul {
     list-style: none;
 }
@@ -65,5 +80,32 @@ a {
     &:hover {
         background-color: $base-gray;
         color: $base-white;
+    }
+}
+
+.tab {
+    display: inline-block;
+    padding: 5px 10px;
+    min-width: 100px;
+    text-align: center;
+    font-size: small;
+
+    &:hover {
+        background-color: $base-gray;
+        color: $base-white;
+        cursor: default;
+    }
+}
+
+.tab--active {
+    @extend .tab;
+    border-left: 1px solid $base-gray;
+    border-top: 1px solid $base-gray;
+    border-right: 1px solid $base-gray;
+    @include border-top-radius(5px);
+
+    &:hover {
+        background-color: $base-white;
+        color: $base-black;
     }
 }
