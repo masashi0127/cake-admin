@@ -38,8 +38,12 @@ input[type="password"] {
     font-size: medium;
     height: 30px;
     line-height: 30px;
-    @include border-top-radius(3px);
-    @include border-bottom-radius(3px);
+    @include border-top-radius(4px);
+    @include border-bottom-radius(4px);
+
+    &:focus {
+        outline: none;
+    }
 }
 
 select {
@@ -63,7 +67,7 @@ ul {
 
 a {
     text-decoration: none;
-    color: $base-white;
+    color: $base-black;
 }
 
 .base-button {
@@ -80,6 +84,16 @@ a {
     &:hover {
         background-color: $base-gray;
         color: $base-white;
+    }
+}
+
+.search-button {
+    @extend .base-button;
+    color: $accent-color;
+    border-color: $accent-color;
+
+    &:hover {
+        background-color: $accent-color;
     }
 }
 

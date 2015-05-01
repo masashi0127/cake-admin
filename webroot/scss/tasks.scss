@@ -40,5 +40,5 @@
 
 .search-box__search-button {
     @include span-columns(2);
-    @extend .base-button
+    @extend .search-button;
 }

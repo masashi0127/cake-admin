@@ -1,0 +1,81 @@
+@import 'common';
+@import 'header';
+
+.search-box,
+.label-list {
+    @include span-columns(8);
+    @include shift(2);
+}
+
+.search-box {
+    padding-bottom: 20px;
+    border-bottom: 1px solid $base-gray;
+}
+
+.search-box__row {
+    @include fill-parent();
+    @include row();
+    margin-top: 20px;
+}
+
+.search-box__keyword {
+    @include span-columns(4);
+    @include shift(6);
+}
+
+.search-box__search-button {
+    @include span-columns(2);
+    @extend .search-button;
+}
+
+.label-list {
+    margin-top: 20px;
+}
+
+.label-list__row {
+    width: 100%;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.label-list__sub-row {
+
+}
+
+.label-list__item {
+    display: inline-block;
+}
+
+.label-list__item-name {
+    @extend .label-list__item;
+    @include span-columns(8);
+    text-align: center;
+}
+
+.label-list__item-number {
+    @extend .label-list__item;
+    @include span-columns(4);
+    text-align: right;
+}
+
+.label-list__label-text {
+    padding: 0px 5px;
+    background-color: $accent-color;
+    display: inline-block;
+    color: $base-white;
+    @include border-top-radius(4px);
+    @include border-bottom-radius(4px);
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.label-list__item-text {
+    padding: 0px 5px;
+    box-sizing: border-box;
+
+    &:hover {
+        border-bottom: 1px solid $base-gray;
+    }
+}

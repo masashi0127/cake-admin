@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var changed = require('gulp-changed');
 var runSequence = require('run-sequence');
+var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
 var bourbon = require('node-bourbon');
 var neat = require('node-neat');
@@ -41,6 +42,7 @@ gulp.task('script', function(callback) {
 gulp.task('sass', function() {
     gulp
     .src(paths.scss + '*.scss')
+    .pipe(plumber())
     .pipe(changed(paths.css_min))
     .pipe(
         sass({
@@ -55,6 +57,7 @@ gulp.task('sass', function() {
 gulp.task('browserify', function() {
     gulp
     .src(paths.js_org + '**/*.jsx', { read: false })
+    .pipe(plumber())
     .pipe(changed(paths.js_min))
     .pipe(browserify({
         transform: ['reactify', 'babelify'],
