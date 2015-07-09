@@ -2,8 +2,6 @@
 @import 'header';
 
 .search-box {
-    @include span-columns(8);
-    @include shift(2);
 }
 
 .search-box__row {
@@ -41,4 +39,58 @@
 .search-box__search-button {
     @include span-columns(2);
     @extend .search-button;
+}
+
+.search-list {
+    
+}
+
+.search-list__row {
+    @include fill-parent();
+    @include row();
+}
+
+.search-list__row-link {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid $base-gray;
+
+    &:hover {
+        background-color: $base-gray;
+    }
+}
+
+.search-list__items {
+    @include outer-container(100%);
+}
+
+.search-list__item {
+    vertical-align: text-top;
+
+    &.text-center {
+        text-align: center;
+    }
+}
+
+.search-list__item--col80 {
+    @extend .search-list__item;
+    @include span-columns(8);
+}
+
+.search-list__item--col10 {
+    @extend .search-list__item;
+    @include span-columns(2);
+}
+
+.search-list__label-list {
+
+}
+
+.search-list__label {
+    font-size: small;
+    display: inline-block;
+    background-color: $base-light-color;
+    padding: 0 5px;
+    @include border-top-radius(3px);
+    @include border-bottom-radius(3px);
 }

@@ -27,8 +27,13 @@ body {
     width: 100%;
 }
 
-.content {
+.outer {
     @include outer-container(100%);
+}
+
+.content {
+    @include span-columns(8);
+    @include shift(2);
 }
 
 input[type="text"],

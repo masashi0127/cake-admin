@@ -25,10 +25,10 @@
         <li class="header__item">
             <a href="#" class="header__link">タスク管理</a>
             <ul class="header__sub-list">
-                <li class="header__sub-item"><a href="tasks" class="header__sub-link">タスク一覧</a></li>
-                <li class="header__sub-item"><a href="#" class="header__sub-link">タスク登録</a></li>
-                <li class="header__sub-item"><a href="labels" class="header__sub-link">ラベル一覧</a></li>
-                <li class="header__sub-item"><a href="labels/add" class="header__sub-link">ラベル登録</a></li>
+                <li class="header__sub-item"><a href="/tasks" class="header__sub-link">タスク一覧</a></li>
+                <li class="header__sub-item"><a href="/tasks/add" class="header__sub-link">タスク登録</a></li>
+                <li class="header__sub-item"><a href="/labels" class="header__sub-link">ラベル一覧</a></li>
+                <li class="header__sub-item"><a href="/labels/add" class="header__sub-link">ラベル登録</a></li>
             </ul>
         </li>
         <li class="header__item">

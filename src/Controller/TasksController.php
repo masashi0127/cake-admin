@@ -44,7 +44,6 @@ class TasksController extends AppController
      */
     public function add()
     {
-        $task = $this->Tasks->newEntity();
         if ($this->request->is('post')) {
             $task = $this->Tasks->patchEntity($task, $this->request->data);
             if ($this->Tasks->save($task)) {
@@ -54,8 +53,7 @@ class TasksController extends AppController
                 $this->Flash->error('The task could not be saved. Please, try again.');
             }
         }
-        $this->set(compact('task'));
-        $this->set('_serialize', ['task']);
+        $this->render('add');
     }
 
     /**

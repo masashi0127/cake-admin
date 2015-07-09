@@ -34,13 +34,11 @@ class CreateAdminUsers extends AbstractMigration
             'null' => false,
         ]);
         $table->addColumn('created', 'datetime', [
-            'default' => null,
-            'limit' => 255,
+            'default' => 'CURRENT_TIMESTAMP',
             'null' => false,
         ]);
         $table->addColumn('modified', 'datetime', [
-            'default' => null,
-            'limit' => 255,
+            'default' => 'CURRENT_TIMESTAMP',
             'null' => false,
         ]);
         $table->create();
